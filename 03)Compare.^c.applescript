@@ -1,3 +1,5 @@
+-- this script needs YDIFF https://github.com/ymattw/ydiff to work
+
 -- show dialog if the document wasn't saved?
 property showAlertDialog : true
 
