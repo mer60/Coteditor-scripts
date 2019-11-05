@@ -20,5 +20,4 @@ end if
 
 -- " 2>&1 &" redirect stderr to stdout
 set lintMsg to do shell script "/Library/Frameworks/Python.framework/Versions/3.7/bin/flake8 --format='%(row)3d: %(col)3d: %(code)s: %(text)s' " & quoted form of (theFile's POSIX path) & " 2>&1 &"
--- set lintMsg to do shell script "/Library/Frameworks/Python.framework/Versions/3.7/bin/flake8 " & quoted form of (theFile's POSIX path) & " 2>&1 &"
 write to console lintMsg & "\n" & "************* done"
