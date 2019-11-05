@@ -32,5 +32,6 @@ set dirPath to do shell script "dirname " & quoted form of (theFile's POSIX path
 set actDir to quoted form of dirPath
 
 -- show in console
-set grpMsg to (do shell script "/usr/bin/grep -Hnirl --exclude-dir=.vcs --exclude-dir=" & actDir & " --include=*.py " & query & " " & "/Users/MikesMac/Documents/Python" & " | cut -d: -f1")
+-- NOTE all my scripts live in directories below python - so the path may be adjusted
+set grpMsg to (do shell script "/usr/bin/grep -Hnirl --exclude-dir=.vcs --exclude-dir=" & actDir & " --include=*.py " & query & " " & "/Users/<MYNAME>/Documents/Python" & " | cut -d: -f1")
 write to console grpMsg
